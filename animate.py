@@ -26,13 +26,16 @@ axs[0].contourf(x, y, rv.pdf(pos))
 axs[0].set_xlim(xrang[0], xrang[1])
 axs[0].set_ylim(yrang[0], yrang[1])
 axs[0].set_title('Target Distribution')
-axs[0].set_label('pdf')
+axs[0].set_ylabel('y')
 
 axs[1].contour(x, y, rv.pdf(pos))
 axs[1].set_title('Random Walk Metropolis')
+axs[1].set_ylabel('y')
 
 axs[2].contour(x, y, rv.pdf(pos))
 axs[2].set_title('Adaptive Covariance MCMC')
+axs[2].set_ylabel('y')
+axs[2].set_xlabel('x')
 
 # Animate
 batch_size = 10
